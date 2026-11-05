@@ -6,7 +6,10 @@ Choose one short video task with explicit inputs and acceptance criteria. Keep t
 
 ## 2. Evaluate the editor foundation
 
-Compare maintained open-source candidates using the first workflow. Prove programmatic editing, preview, save/load, and export. Document feature coverage and fork costs, then record the selected foundation in an ADR.
+The source-based shortlist is in [the research](editor-and-animation-research.md).
+First resolve whether to retain and restyle the existing Qt UI or require Svelte for the full editor UI.
+Compare candidates using the first workflow. Prove programmatic editing, preview, save/load, and export on macOS and Windows.
+Document feature coverage and fork costs, then record the selected foundation in an ADR.
 
 ## 3. Build one complete editing path
 
@@ -14,7 +17,8 @@ Connect a minimal custom UI, saved project model, and editing harness. Support a
 
 ## 4. Add SVG assets and animation
 
-Generate an editable SVG, animate named elements, place it on the timeline, and verify the final render. Save enough inputs and metadata to reproduce the accepted result.
+Generate an editable SVG, animate named elements using a saved style pack, place it on the timeline, and verify the final render.
+Current animation scope is 2D only. Save enough inputs and metadata to reproduce the accepted result.
 
 ## 5. Grow professional editing coverage
 

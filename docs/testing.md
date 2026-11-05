@@ -20,6 +20,12 @@ Build an edge-case matrix for each control. Cover every applicable class, includ
 
 Use the real UI for the complete happy path and important failure paths. Keep automation for repeatable coverage. Record tested cases and remaining gaps.
 
+For Tauri, test the installed application on macOS and Windows as well as the frontend in a browser.
+Tauri's current docs describe WebdriverIO with an embedded driver for both platforms; validate it with the pinned tool versions.
+Browser tests with mocked Rust commands do not prove real file access, rendering, or native integration.
+If Qt controls are retained, also test them through native application automation; browser checks cannot exercise those controls.
+[Tauri WebDriver documentation](https://v2.tauri.app/develop/tests/webdriver/).
+
 ## End-to-end acceptance
 
 For the first implementation, verify brief or instruction -> project operation -> preview -> save/reopen -> export. Verify undo and failures without losing the original project.

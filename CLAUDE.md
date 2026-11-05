@@ -7,8 +7,11 @@
 ## Current state
 
 - Planning only. No application code, dependencies, tests, or profiling tools yet.
-- No upstream editor, framework, renderer, or model provider has been chosen.
-- Next: define one small end-to-end video workflow, then evaluate an editor foundation against it.
+- Targets: macOS and Windows. Chosen stack: Rust, Tauri, Svelte 5, vanilla CSS; see ADR 0001.
+- Current animation scope is 2D. Content and style remain open; 3D belongs to later production work.
+- Editor UI boundary is under discussion: retain and restyle Kdenlive's Qt controls, or require Svelte throughout.
+- No upstream editor, animation renderer, or model provider has been adopted.
+- Source research is in `docs/editor-and-animation-research.md`; no build or performance claims are verified yet.
 - Read `docs/tasks.md` for current work and `docs/roadmap.md` for the sequence.
 
 ## Working rules

@@ -1,6 +1,10 @@
 # Proposed architecture
 
-This is a planning outline, not an adopted implementation or an ADR. Choose concrete interfaces after the first workflow and upstream evaluation.
+The platform targets and requested stack are recorded in [ADR 0001](adr/0001-desktop-platforms-and-stack.md).
+The component boundaries below remain proposals; no implementation exists.
+
+The main editor UI is under discussion: a Kdenlive fork could retain its Qt controls, while a complete Svelte UI would need its own controls over an engine such as MLT.
+See [the research](editor-and-animation-research.md) before choosing either path.
 
 ## Parts
 
@@ -11,7 +15,7 @@ This is a planning outline, not an adopted implementation or an ADR. Choose conc
 | Editing harness | Convert instructions into a reviewable plan and validated project operations. |
 | Editor adapter | Map those operations to the selected editor or media engine. |
 | Asset generator | Create versioned SVG assets and metadata for animation. |
-| Animation and 3D workflows | Produce reusable scenes and motion with saved parameters and tool versions. |
+| 2D animation workflows | Produce reusable scenes and motion from saved assets, style rules, timing, and tool versions. |
 | Render pipeline | Produce previews and final videos from saved project state. |
 | Verification | Check project validity, output properties, regressions, and performance. |
 
@@ -20,6 +24,10 @@ This is a planning outline, not an adopted implementation or an ADR. Choose conc
 Brief -> plan -> assets and scenes -> timeline edits -> preview -> human review -> final render.
 
 The UI and harness should share one project model. A harness operation should identify its target, inputs, expected preconditions, and result. Apply edits transactionally or preserve a recoverable project version before changing state.
+
+If retaining an upstream editor, route harness changes through its project and undo operations.
+Avoid creating a second independent timeline state that can drift from the visible editor.
+Keep later 3D workflows outside the current 2D implementation scope.
 
 ## Reproducibility
 

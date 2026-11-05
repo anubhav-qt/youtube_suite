@@ -6,6 +6,15 @@ Build a system that helps the creator become a good YouTuber through repeatable 
 
 The style and subject of the videos are intentionally undecided. Early technical choices should leave room for them.
 
+## Chosen platforms and stack
+
+Build an installed desktop application for macOS and Windows using Rust, Tauri, Svelte 5, and vanilla CSS.
+See [ADR 0001](adr/0001-desktop-platforms-and-stack.md).
+The option to retain and restyle an upstream Qt editor UI is being evaluated; it requires a separate decision about the main editor UI.
+
+The current animation scope is 2D only.
+The earlier 3D ambition remains part of the later production system.
+
 ## Video editing suite
 
 Create a professional video editing suite with our own UI and an agent harness. Evaluate whether to fork or integrate a mature, actively maintained, widely used open-source editor. No upstream has been chosen.
@@ -21,6 +30,11 @@ The harness should translate a user's request into an explicit edit plan, apply 
 Generate editable SVG assets for animated video elements such as diagrams, labels, icons, characters, and explainers. Preserve useful groups, stable element IDs, layers, dimensions, colours, and text choices so animation tools can address them reliably.
 
 Store generation inputs, asset versions, and animation instructions. Preview assets in context and check rendering at the intended export size. SVG generation and animation playback are separate responsibilities; the chosen renderer must support the intended effects.
+
+Support a saved style pack with approved references and explicit visual and motion rules.
+Keep assets, scene timing, animation controls, and rendered output separate so the creator can revise them.
+Allow raster layers or drawn frames if the chosen 2D style needs them.
+See [the animation research](editor-and-animation-research.md) for candidate tools and the proposed workflow.
 
 ## Reproducible production
 
