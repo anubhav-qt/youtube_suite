@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Local source media, generated assets, renders, and scratch files.
+/media/
+/renders/
+/work/
+/tmp/
