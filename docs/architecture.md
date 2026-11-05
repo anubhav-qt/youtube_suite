@@ -3,8 +3,9 @@
 The platform targets and requested stack are recorded in [ADR 0001](adr/0001-desktop-platforms-and-stack.md).
 The component boundaries below remain proposals; no implementation exists.
 
-The main editor UI is under discussion: a Kdenlive fork could retain its Qt controls, while a complete Svelte UI would need its own controls over an engine such as MLT.
-See [the research](editor-and-animation-research.md) before choosing either path.
+The selected foundation retains and restyles Kdenlive's Qt controls, as recorded in [ADR 0002](adr/0002-retain-kdenlive-editor-ui.md).
+Use Rust for the harness and Svelte where useful; the process bridge and any separate Tauri workspace remain to be designed.
+See [the research](editor-and-animation-research.md) for the alternatives considered.
 
 ## Parts
 
@@ -25,7 +26,7 @@ Brief -> plan -> assets and scenes -> timeline edits -> preview -> human review 
 
 The UI and harness should share one project model. A harness operation should identify its target, inputs, expected preconditions, and result. Apply edits transactionally or preserve a recoverable project version before changing state.
 
-If retaining an upstream editor, route harness changes through its project and undo operations.
+Route harness changes through the retained editor's project and undo operations.
 Avoid creating a second independent timeline state that can drift from the visible editor.
 Keep later 3D workflows outside the current 2D implementation scope.
 
@@ -38,8 +39,9 @@ Keep later 3D workflows outside the current 2D implementation scope.
 - Keep large source media and generated renders outside Git; version their references and provenance.
 - Make long renders resumable or safely restartable where supported.
 
-## Editor foundation evaluation
+## Editor foundation qualification
 
-Evaluate candidates with the same small real editing task. Record maintenance evidence, usage evidence, licence obligations, platform support, project format, programmatic control, custom UI feasibility, supported features, render quality, performance, and the cost of maintaining a fork.
+Qualify the selected Kdenlive foundation with a small real editing task. Record licence obligations, platform support, project format, programmatic control, restyling feasibility, supported features, render quality, performance, and the cost of maintaining the fork.
 
-Decide between a fork, an integration, or an engine adapter only after the spike. Record that major decision in an ADR.
+Pin and build an unchanged stable baseline before restyling or adding the harness bridge.
+If qualification exposes a blocker, document the evidence before proposing a change to ADR 0002.

@@ -7,10 +7,11 @@
 ## Current state
 
 - Planning only. No application code, dependencies, tests, or profiling tools yet.
-- Targets: macOS and Windows. Chosen stack: Rust, Tauri, Svelte 5, vanilla CSS; see ADR 0001.
+- Targets: macOS and Windows. Keep Kdenlive's Qt/C++ editor; see ADRs 0001 and 0002.
 - Current animation scope is 2D. Content and style remain open; 3D belongs to later production work.
-- Editor UI boundary is under discussion: retain and restyle Kdenlive's Qt controls, or require Svelte throughout.
-- No upstream editor, animation renderer, or model provider has been adopted.
+- Restyle existing controls and hide unwanted tools; preserve project handling and undo.
+- Use Rust for the harness and Svelte 5 with vanilla CSS where useful; Tauri is optional for a separate workspace.
+- Kdenlive is selected but not imported or built. Animation renderer and model provider remain open.
 - Source research is in `docs/editor-and-animation-research.md`; no build or performance claims are verified yet.
 - Read `docs/tasks.md` for current work and `docs/roadmap.md` for the sequence.
 

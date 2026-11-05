@@ -8,16 +8,18 @@ The style and subject of the videos are intentionally undecided. Early technical
 
 ## Chosen platforms and stack
 
-Build an installed desktop application for macOS and Windows using Rust, Tauri, Svelte 5, and vanilla CSS.
-See [ADR 0001](adr/0001-desktop-platforms-and-stack.md).
-The option to retain and restyle an upstream Qt editor UI is being evaluated; it requires a separate decision about the main editor UI.
+Build an installed desktop application for macOS and Windows by retaining and restyling Kdenlive's Qt/C++ editor.
+Use Rust for the harness and Svelte 5 with vanilla CSS where useful; use Tauri for a separate production workspace only if needed.
+See [ADR 0001](adr/0001-desktop-platforms-and-stack.md) and [ADR 0002](adr/0002-retain-kdenlive-editor-ui.md).
 
 The current animation scope is 2D only.
 The earlier 3D ambition remains part of the later production system.
 
 ## Video editing suite
 
-Create a professional video editing suite with our own UI and an agent harness. Evaluate whether to fork or integrate a mature, actively maintained, widely used open-source editor. No upstream has been chosen.
+Create a professional video editing suite with our own appearance and workflows, using Kdenlive as the selected editor foundation.
+Retain its existing controls and editing behavior, then add an agent harness.
+No source has been imported or built yet.
 
 The long-term ambition is broad professional feature coverage. Before promising feature parity, inventory the chosen upstream's features and test which ones our UI and harness can actually expose.
 

@@ -3,14 +3,15 @@
 Research date: 2026-11-06.
 
 This is a source-based comparison, not a completed build, benchmark, or production qualification.
-Recommendations below are engineering judgments; no editor or animation engine has been adopted yet.
+The creator has selected retaining and restyling Kdenlive's Qt editor UI since this comparison was written.
+The source has not been imported or qualified; animation candidates remain recommendations.
 
 ## Recommendation
 
 Kdenlive is the strongest complete editor candidate for this project's needs.
 MLT is the first engine to test if the complete editing UI must be written in Svelte.
 Keeping and restyling Kdenlive's existing Qt UI is a valid alternative that preserves much more finished behavior.
-The choice between those paths is still open.
+The creator chose the retained Qt UI path; the Svelte-only alternative remains documented for context.
 
 For 2D animation, test Glaxnimate first for the SVG and vector workflow.
 Evaluate Friction for richer motion design, Synfig for puppet animation, and OpenToonz for drawn animation if the chosen style needs them.
@@ -72,14 +73,15 @@ Do not assume Kdenlive exposes a complete stable automation API; prove or add th
 | Tauri + Svelte editor over MLT | Media processing, composition, effects, and render services exposed by MLT. | Timeline interactions, tool panels, project semantics, undo, preview integration, and harness. |
 | Tauri/Svelte production hub plus a Qt editor process | Existing Qt editor and a new web-based production workspace. | Process communication, clear ownership of open projects, and a coherent two-window workflow. |
 
-These are proposed designs, not proven integrations.
+The retained Qt UI path is selected, but none of these integrations has been implemented or proven here.
 Embedding arbitrary Qt widgets directly inside a Tauri webview is not a simple component import.
 Avoid promising a single seamless window until a cross-platform prototype proves it.
 Tauri supports bundled sidecar executables, but that does not automatically merge their UIs.
 [Tauri sidecar documentation](https://v2.tauri.app/develop/sidecar/).
 
-The user's chosen application stack is Rust, Tauri, Svelte 5, and vanilla CSS.
-The user has asked whether preserving upstream UI can reduce rebuilding; relaxing the main editor UI requirement remains a separate decision.
+The user's initial application stack was Rust, Tauri, Svelte 5, and vanilla CSS.
+The user then chose to keep and restyle Qt editor controls and use Rust and Svelte where useful.
+Tauri remains an option for a useful separate workspace, not a requirement for hosting the Qt editor.
 The native media dependencies discussed here are C/C++ libraries, even when controlled by Rust.
 
 ## MLT integration risks to prove
@@ -162,4 +164,4 @@ This is a proposed engineering fixture, not a channel style decision.
 - Introduce wrong timing, skipped validation, and flipped conditions one at a time; require tests to fail, then restore clean code.
 
 No part of this qualification has been run yet.
-The next human decision concerns retaining the Qt editor UI versus requiring the entire editor UI to use Svelte.
+The UI choice is settled; the next step is to define the small test workflow and qualify a pinned Kdenlive baseline.

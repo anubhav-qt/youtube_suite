@@ -4,7 +4,8 @@ Use an ADR for a major decision with lasting consequences, such as the upstream 
 
 Do not create an ADR for every small change. Put routine choices, progress, and todos in `docs/tasks.md` or the relevant working document.
 
-- [0001: Desktop platforms and application stack](0001-desktop-platforms-and-stack.md): macOS, Windows, Rust, Tauri, Svelte 5, and vanilla CSS; the main editor UI boundary is under discussion.
+- [0001: Desktop platforms and application stack](0001-desktop-platforms-and-stack.md): macOS and Windows with the application stack amended by ADR 0002.
+- [0002: Retain and restyle Kdenlive's editor UI](0002-retain-kdenlive-editor-ui.md): preserve Qt editor controls and use Rust and Svelte where useful.
 
 When needed, use `NNNN-short-title.md` with:
 

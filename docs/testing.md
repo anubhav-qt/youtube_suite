@@ -23,7 +23,7 @@ Use the real UI for the complete happy path and important failure paths. Keep au
 For Tauri, test the installed application on macOS and Windows as well as the frontend in a browser.
 Tauri's current docs describe WebdriverIO with an embedded driver for both platforms; validate it with the pinned tool versions.
 Browser tests with mocked Rust commands do not prove real file access, rendering, or native integration.
-If Qt controls are retained, also test them through native application automation; browser checks cannot exercise those controls.
+Test the retained Qt controls through native application automation; browser checks cannot exercise those controls.
 [Tauri WebDriver documentation](https://v2.tauri.app/develop/tests/webdriver/).
 
 ## End-to-end acceptance

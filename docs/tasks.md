@@ -3,8 +3,9 @@
 ## Current state
 
 Planning repository created on 2026-11-06. No application code exists.
-macOS and Windows are selected, with Rust, Tauri, Svelte 5, and vanilla CSS as the requested stack.
-Retaining an upstream Qt editor UI is under discussion.
+macOS and Windows are selected.
+Keep and restyle Kdenlive's Qt/C++ editor, with Rust and Svelte 5 plus vanilla CSS where useful.
+Tauri can host a separate workspace if needed; no source has been imported or built yet.
 
 ## Completed
 
@@ -16,21 +17,23 @@ Retaining an upstream Qt editor UI is under discussion.
 - [x] Record the chosen platforms and application stack in ADR 0001.
 - [x] Research editor foundations and 2D animation options using primary sources.
 - [x] Document how retaining and restyling Qt controls differs from rebuilding the editor UI in Svelte.
+- [x] Record the creator's choice to retain Kdenlive's Qt controls in ADR 0002.
 
 ## Next
 
 - [ ] Define one short video workflow and measurable acceptance criteria.
-- [ ] Resolve the main editor UI boundary: retained Qt controls or full Svelte UI.
-- [ ] Evaluate maintained open-source editors against that workflow.
-- [ ] Record the foundation decision in an ADR.
+- [ ] Pin and build an unchanged Kdenlive stable baseline on macOS and Windows.
+- [ ] Qualify the baseline against the first workflow and measure performance.
+- [ ] Prove a harness command bridge that preserves the editor's project state and undo.
 - [ ] Pin stack versions and document setup, test, lint, and profiling commands.
 - [ ] Build and verify the first complete editing workflow.
 - [ ] Generate and animate one SVG asset in a rendered video.
 
 ## Open decisions
 
-Discuss the editor UI boundary next, one topic at a time.
-The editor foundation, animation engine, rendering environment, model providers, and asset storage remain open.
+The editor foundation and retained Qt UI are decided; do not ask the creator to choose them again.
+Define the first test workflow next, one topic at a time.
+The animation engine, process bridge, any separate production workspace, model providers, and asset storage remain open.
 Channel style and content remain deferred; current animation work is limited to 2D.
 
 ## Verification
@@ -44,3 +47,6 @@ No candidate has been built, exercised end to end, or profiled for this project.
 
 Research update checks on 2026-11-06 passed: 13 Markdown files, 21 local links, no em dashes, no stale claims that the stack is undecided, and a 37-line session guide.
 The staged diff was checked for whitespace errors before committing.
+
+Qt decision update checks on 2026-11-06 passed: 14 Markdown files, 29 local links, and a 38-line session guide.
+No stale statements leave the editor UI choice open; no executable code changed.

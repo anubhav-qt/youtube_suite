@@ -13,8 +13,8 @@
 - Make project changes recoverable and test undo or rollback behavior.
 - Handle cancellation, partial failure, and retries for long operations.
 - Keep secrets out of source, fixtures, logs, and generated project metadata.
-- Pin runtime and dependency versions when implementing the chosen Rust, Tauri, Svelte 5, and vanilla CSS stack.
-- If the upstream Qt UI is retained, document that agreed boundary and preserve a small, reviewable fork diff.
+- Pin the upstream Qt/C++ editor and all added Rust or web dependencies when implementing the selected architecture.
+- Preserve a small, reviewable Kdenlive fork diff; add Svelte or Tauri surfaces only where useful.
 - Define reproducible local setup and CI commands with the first implementation.
 - Track asset provenance and upstream licence requirements.
 

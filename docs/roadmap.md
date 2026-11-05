@@ -4,16 +4,18 @@
 
 Choose one short video task with explicit inputs and acceptance criteria. Keep the channel's long-term content and style open. Resolve human decisions one topic at a time.
 
-## 2. Evaluate the editor foundation
+## 2. Qualify the selected editor foundation
 
 The source-based shortlist is in [the research](editor-and-animation-research.md).
-First resolve whether to retain and restyle the existing Qt UI or require Svelte for the full editor UI.
-Compare candidates using the first workflow. Prove programmatic editing, preview, save/load, and export on macOS and Windows.
-Document feature coverage and fork costs, then record the selected foundation in an ADR.
+The creator selected retaining and restyling Kdenlive's Qt UI in [ADR 0002](adr/0002-retain-kdenlive-editor-ui.md).
+Pin and build an unchanged stable release on macOS and Windows.
+Use the first workflow to prove editing, preview, save/load, export, and the feasibility of a harness command bridge.
+Record feature coverage, performance, and fork costs.
 
 ## 3. Build one complete editing path
 
-Connect a minimal custom UI, saved project model, and editing harness. Support an instruction, a visible timeline change, preview, undo, save/reopen, and final export. Add checks and profiling before expanding scope.
+Restyle the retained editor controls and connect the editing harness to the editor's project and undo operations.
+Support an instruction, a visible timeline change, preview, undo, save/reopen, and final export. Add checks and profiling before expanding scope.
 
 ## 4. Add SVG assets and animation
 
