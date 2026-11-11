@@ -6,7 +6,7 @@ The video editor is one part of this larger system, much like Jello is for music
 
 Status: planning repository. No editor, generator, harness, or rendering pipeline is implemented yet.
 
-Targets: macOS and Windows. Keep and restyle Kdenlive's Qt/C++ editor, with Rust for the harness and Svelte 5 with vanilla CSS where useful. Tauri can host a separate production workspace if needed. Current animation scope is 2D; video style, content, and animation backend remain open.
+Targets: macOS and Windows. Keep and restyle Kdenlive's Qt/C++ editor, with a TypeScript fork of pi for the harness, Rust for its tools and gateways, and Svelte 5 with vanilla CSS where useful. Tauri can host a separate production workspace if needed. Current animation scope is 2D; video style, content, and animation backend remain open.
 
 Kdenlive is selected but has not been imported, built, or qualified yet. See [the editor decision](docs/adr/0002-retain-kdenlive-editor-ui.md).
 

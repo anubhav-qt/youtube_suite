@@ -2,7 +2,7 @@
 
 Date: 2026-11-06
 
-Status: Accepted by the creator.
+Status: Accepted by the creator. The harness language is amended by [ADR 0004](0004-harness-on-a-typescript-pi-fork.md).
 
 ## Context
 
