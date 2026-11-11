@@ -18,23 +18,47 @@ Tauri can host a separate workspace if needed; no source has been imported or bu
 - [x] Research editor foundations and 2D animation options using primary sources.
 - [x] Document how retaining and restyling Qt controls differs from rebuilding the editor UI in Svelte.
 - [x] Record the creator's choice to retain Kdenlive's Qt controls in ADR 0002.
+- [x] Capture channel management: publishing, analytics, and learning.
+- [x] Study Bloop's and Jello's harnesses in `docs/harness-study.md`.
+- [x] Record one harness with creator approval for every public channel action in ADR 0003.
 
 ## Next
 
-- [ ] Define one short video workflow and measurable acceptance criteria.
+- [x] Choose the harness foundation: a TypeScript pi fork with Rust tools (ADR 0004).
+- [x] Choose model access: pi's own sign-in, as in Jello (ADR 0005).
+- [x] Choose jobs: long-running chats, with Bloop's loop and memory (ADR 0006).
+- [x] Choose one Video chat per video (ADR 0006).
+- [x] Choose the first channel functions: upload and learn (project brief).
+- [x] Choose grade checkpoints and metrics: 7 and 28 days, five metrics (ADR 0006).
+- [x] Place upload and learn as roadmap step 4, after the first editing path.
+- [x] Choose the store: one SQLite file per channel, owned by Rust (ADR 0007).
+- [x] Choose the first test video's shape: a 60 to 90 second narrated explainer in 16:9 ([first workflow](first-workflow.md)).
+- [x] Choose the first workflow's inputs: all generated, with text-to-speech narration.
+- [x] Choose the narration engine: Kokoro-82M, local.
+- [x] Choose the first test video's edit: a fixed edit list ([first workflow](first-workflow.md#the-edit)).
+- [x] Make narration a harness feature, Kokoro first, in a pinned Python worker (ADR 0008).
+- [x] Choose the first workflow's code checks: exact checks against the edit list ([first workflow](first-workflow.md#acceptance-checks)).
+- [x] Choose the creator review: a checklist in the app ([first workflow](first-workflow.md#creator-review)).
+- [x] Choose the harness role: build by hand in step 2, then by the harness in step 3 ([first workflow](first-workflow.md#two-builds)).
+- [x] Choose where the first workflow ends: export, then a private test upload in step 4.
+- [ ] Fork and trim pi at a pinned commit, keeping its sign-in code.
+- [ ] Measure the narration worker's size and speed on macOS and Windows before building it.
 - [ ] Pin and build an unchanged Kdenlive stable baseline on macOS and Windows.
 - [ ] Qualify the baseline against the first workflow and measure performance.
 - [ ] Prove a harness command bridge that preserves the editor's project state and undo.
 - [ ] Pin stack versions and document setup, test, lint, and profiling commands.
-- [ ] Build and verify the first complete editing workflow.
+- [ ] Build and verify the first complete editing workflow, with the harness core.
+- [ ] Build upload and learn: channel gateway, approvals, private upload, analytics, and grades.
 - [ ] Generate and animate one SVG asset in a rendered video.
 
 ## Open decisions
 
 The editor foundation and retained Qt UI are decided; do not ask the creator to choose them again.
-Define the first test workflow next, one topic at a time.
-The animation engine, process bridge, any separate production workspace, model providers, and asset storage remain open.
+The first workflow is defined in [the first workflow](first-workflow.md); do not ask its questions again.
+The animation engine, process bridge, any separate production workspace, and asset storage remain open.
 Channel style and content remain deferred; current animation work is limited to 2D.
+Channel autonomy and one shared harness are decided in ADR 0003; do not ask again.
+The harness foundation is decided in ADR 0004, model access in ADR 0005, and the chats, one per video, in ADR 0006. The first channel functions are in the project brief. Grade checkpoints and metrics are in ADR 0006, upload and learn is roadmap step 4, and the store is in ADR 0007. The harness study's open questions are all answered ([harness study](harness-study.md#open-questions)).
 
 ## Verification
 
@@ -50,3 +74,10 @@ The staged diff was checked for whitespace errors before committing.
 
 Qt decision update checks on 2026-11-06 passed: 14 Markdown files, 29 local links, and a 38-line session guide.
 No stale statements leave the editor UI choice open; no executable code changed.
+
+Harness study and ADR 0003 checks on 2026-11-12 passed: 16 Markdown files, 40 local links and anchors, no em or en dashes, and a 41-line session guide.
+The YouTube facts in the harness study were read from Google's docs that day; no API call was made.
+After the upload-and-learn scope and analytics facts, the same checks passed with 19 Markdown files, 66 local links, and a 43-line session guide.
+After the grade, roadmap, and store decisions, they passed with 20 Markdown files, 76 local links, and a 44-line session guide.
+After the first workflow's shape, inputs, edit, and the narration feature, they passed with 22 Markdown files, 92 local links, and a 46-line session guide.
+After the first workflow was fully defined, they passed with 22 Markdown files, 97 local links, and a 46-line session guide.

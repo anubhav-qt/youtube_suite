@@ -2,7 +2,7 @@
 
 Date: 2026-11-06
 
-Status: Accepted; the editor UI boundary is amended by [ADR 0002](0002-retain-kdenlive-editor-ui.md).
+Status: Accepted; the editor UI boundary is amended by [ADR 0002](0002-retain-kdenlive-editor-ui.md), and the harness language by [ADR 0004](0004-harness-on-a-typescript-pi-fork.md).
 
 ## Context
 
