@@ -4,7 +4,17 @@
 
 Build a system that helps the creator become a good YouTuber through repeatable production workflows. The system should support ideas, research, writing, direction, assets, animation, 3D modelling, editing, sound, review, export, and later publishing and learning from results.
 
-The style and subject of the videos are intentionally undecided. Early technical choices should leave room for them.
+## Channel direction
+
+**Cinematic 2D animated stories set to the creator's own songs** (the creator, 2026-11-13).
+
+- Music: each video uses one of the creator's songs, made in Jello.
+- Story: the creator writes the story, with help from Claude or other models.
+- Pictures: 2D animation built from our own asset set.
+- Quality: production grade, not quick cuts or templates.
+
+The visual style, video length, and format are still open.
+How this changes the first workflow is still open ([first workflow](first-workflow.md)).
 
 ## Chosen platforms and stack
 
@@ -19,7 +29,7 @@ The earlier 3D ambition remains part of the later production system.
 
 Create a professional video editing suite with our own appearance and workflows, using Kdenlive as the selected editor foundation.
 Retain its existing controls and editing behavior, then add an agent harness.
-No source has been imported or built yet.
+An unchanged baseline is built on Windows ([Kdenlive baseline](kdenlive-baseline.md)); no source is imported yet.
 
 The long-term ambition is broad professional feature coverage. Before promising feature parity, inventory the chosen upstream's features and test which ones our UI and harness can actually expose.
 
