@@ -2,23 +2,23 @@
 
 ## What we are building
 
-`youtube_suite` is a reproducible YouTube production system. It includes a professional video editor with our own UI, one agent harness, SVG animation asset generation, channel management (publishing, analytics, learning), and later direction, animation, and 3D workflows. Style and content will be decided later.
+`youtube_suite` is a reproducible YouTube production system. It includes a professional video editor with our own UI, one agent harness, SVG animation asset generation, channel management (publishing, analytics, learning), and later direction, animation, and 3D workflows. The channel is cinematic 2D animated stories set to the creator's own Jello songs; see `docs/project-brief.md`.
 
 ## Current state
 
 - Planning only. No application code, dependencies, tests, or profiling tools yet.
 - Targets: macOS and Windows. Keep Kdenlive's Qt/C++ editor; see ADRs 0001 and 0002.
-- Current animation scope is 2D. Content and style remain open; 3D belongs to later production work.
+- Current animation scope is 2D. Visual style, length, and format remain open; 3D belongs to later production work.
 - Restyle existing controls and hide unwanted tools; preserve project handling and undo.
 - The harness is a TypeScript hard fork of pi; tools and gateways are Rust (ADR 0004). Svelte 5 with vanilla CSS where useful; Tauri is optional for a separate workspace.
-- Kdenlive is selected but not imported or built. The animation renderer remains open.
+- Unchanged Kdenlive 26.08.3 builds and passes its upstream tests on Windows via KDE Craft; see `docs/kdenlive-baseline.md`. No source is imported yet. The animation renderer remains open.
 - Models are reached through pi's own sign-in, as in Jello: Claude, ChatGPT, or an API key (ADR 0005).
 - One harness serves editing and the channel. Every public or irreversible YouTube action needs the creator's approval, enforced in the Rust channel gateway (ADR 0003).
 - Long-running chats: one Video chat per video, plus Analyst, Lessons, and Auditor, with Bloop's scheduler, handovers, grades, lessons, memory, and compaction (ADR 0006).
 - Narration is a harness feature through a Rust narration gateway; Kokoro-82M first in a pinned Python worker, more engines later (ADR 0008).
 - The store is one SQLite file per channel, opened only by the Rust records gateway (ADR 0007).
 - The harness learns from Bloop and Jello; its design and open questions are in `docs/harness-study.md`.
-- The first workflow is defined: a 60 to 90 second narrated explainer with exact checks; see `docs/first-workflow.md`.
+- The first workflow is an animated piece set to one full Jello song, with exact checks; it waits for the test song. See `docs/first-workflow.md`.
 - Source research is in `docs/editor-and-animation-research.md`; no build or performance claims are verified yet.
 - Read `docs/tasks.md` for current work and `docs/roadmap.md` for the sequence.
 

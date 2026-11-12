@@ -2,8 +2,9 @@
 
 ## 1. Define the first workflow
 
-Choose one short video task with explicit inputs and acceptance criteria. Keep the channel's long-term content and style open. Resolve human decisions one topic at a time.
+Choose one video task with explicit inputs and acceptance criteria. Resolve human decisions one topic at a time.
 Done on 2026-11-12: a 60 to 90 second narrated explainer in 16:9 with generated inputs, a fixed edit list, exact checks, and a review checklist ([first workflow](first-workflow.md)).
+Reopened on 2026-11-13: it becomes an animated piece set to one full Jello song, to fit the channel, redecided one topic at a time and completed the same day.
 
 ## 2. Qualify the selected editor foundation
 
@@ -39,7 +40,8 @@ Expand features against a tracked upstream capability matrix. Improve performanc
 
 ## 7. Connect the wider production system
 
-Add repeatable direction, writing, sound, 3D, animation, and review workflows as real videos need them. Decide channel style and content with the creator.
+Add repeatable direction, writing, sound, 3D, animation, and review workflows as real videos need them.
+The channel is cinematic 2D animated stories set to the creator's Jello songs ([project brief](project-brief.md#channel-direction)); decide its visual style with the creator.
 
 ## Channel management
 
